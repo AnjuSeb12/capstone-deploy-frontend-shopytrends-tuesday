@@ -6,6 +6,8 @@ import { Container, Row, Col, Button, Form, ListGroup } from 'react-bootstrap';
 import AddCart from './AddCart';
 
 import instance from '../../axios';
+import { toast, ToastContainer } from 'react-toastify';
+
 
 const ProductDetail = () => {
     const { id } = useParams();
@@ -30,6 +32,7 @@ const ProductDetail = () => {
                 setReviews(reviewsResponse.data.reviews);
             } catch (error) {
                 console.error("Error fetching product or reviews:", error);
+                
             } finally {
                 setLoading(false);
             }
@@ -69,6 +72,7 @@ const ProductDetail = () => {
             setNewReview({ rating: '', comment: '' });
         } catch (error) {
             console.error("Error submitting review:", error);
+            toast.error(error.response.data.message)
         } finally {
             setIsSubmittingReview(false);
         }
