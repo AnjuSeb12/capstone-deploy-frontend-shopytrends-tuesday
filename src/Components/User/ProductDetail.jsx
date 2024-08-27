@@ -38,8 +38,8 @@ const ProductDetail = () => {
         fetchProductAndReviews();
 
         // Check if the user is logged in (assuming you store a token in cookies)
-        // const userToken = Cookies.get('token');
-        const userToken = localStorage.getItem('token');
+        // const userToken = Cookies.get('userToken');
+        const userToken = localStorage.getItem('userToken');
         console.log(".....rev",userToken)
         if (userToken) {
             setIsLoggedIn(true);
@@ -57,7 +57,7 @@ const ProductDetail = () => {
 
     const handleSubmitReview = async (e) => {
         e.preventDefault();
-        setIsSubmittingReview(true);
+        // setIsSubmittingReview(true);
         try {
             const response = await instance.post(`/api/v1/review/product/${id}`, {
                 rating: newReview.rating,
