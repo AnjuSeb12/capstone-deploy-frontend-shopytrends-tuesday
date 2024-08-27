@@ -11,6 +11,14 @@ const AddCart = ({ product, quantity = 1, disabled }) => {
 
   const handleAddToCart = async (productId) => {
     setIsAdding(true);
+    const token = localStorage.getItem('userToken'); // Replace with your token retrieval logic
+    
+    if (!token) {
+      // Redirect to login if not authenticated
+      navigate('/user/signin', { replace: true });
+      setIsAdding(false);
+      return;
+    }
     try {
       await instance.post(
         `/api/v1/cart/addcart/${productId}`,

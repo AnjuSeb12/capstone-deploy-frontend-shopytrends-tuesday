@@ -67,8 +67,10 @@ const OrderView = () => {
                   <h4>{item.title}</h4>
                   <p>Price: ₹{item.price}</p>
                   <p>Quantity: {item.quantity}</p>
+                  <p><strong>Total Price: ₹{item.totalPrice}</strong></p>
                 </div>
               ))}
+              
               <p>Status: {order.paymentStatus}</p>
               <p>Shipping Address: {order.shippingAddress.address}, {order.shippingAddress.city}, {order.shippingAddress.postalCode}, {order.shippingAddress.country}</p>
               {order.paymentStatus !== 'Delivered' && order.paymentStatus !== 'Canceled' && (

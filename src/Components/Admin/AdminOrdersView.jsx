@@ -57,6 +57,7 @@ const OrderList = () => {
                                             <h3 className="text-lg font-semibold">{item.productId.title}</h3>
                                             <p className="text-gray-600">Quantity: {item.quantity}</p>
                                             <p className="text-gray-600">Price: ₹{item.price}</p>
+                                            <p className="text-gray-600">Total Price: ₹{item.totalPrice}</p>
                                         </div>
                                     </div>
                                 ))}

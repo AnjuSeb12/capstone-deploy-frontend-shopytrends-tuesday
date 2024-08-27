@@ -41,6 +41,7 @@ import AdminOrdersView from './Components/Admin/AdminOrdersView.jsx';
 
 
 import './index.css'
+import ProtectedRoute from './Components/ProtectedRoute.jsx';
 
 
 
@@ -79,7 +80,8 @@ const router = createBrowserRouter([
         },
         {
           path: "/user/cart",
-          element:<CartAdding />
+         
+           element: <ProtectedRoute element={<CartAdding />} /> 
 
         },
         {
@@ -97,7 +99,7 @@ const router = createBrowserRouter([
         },
         {
           path: "/order-form",
-          element:<OrderForm />
+          element:<ProtectedRoute element={<OrderForm />} /> 
 
           
          
@@ -110,6 +112,7 @@ const router = createBrowserRouter([
         {
           path: "/order-cart-form",
           element: <OrderCartForm />
+          
         },
         {
           path: "/user/orders",
@@ -135,6 +138,7 @@ const router = createBrowserRouter([
       {
         path: "/sellerdashboard",
         element: <SellerDashboard />
+        
 
       },
       {
