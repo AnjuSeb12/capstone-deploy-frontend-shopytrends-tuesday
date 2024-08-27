@@ -87,6 +87,7 @@ const ProductDetail = () => {
             {currentItem && (
                 <>
                     <Row>
+                        <ToastContainer/>
                         <Col md={6} className="d-flex justify-content-center align-items-center">
                             <img src={currentItem.image} alt={currentItem.title} className="img-fluid"
                                 style={{ maxWidth: '100%', maxHeight: '400px', objectFit: 'contain' }} />
