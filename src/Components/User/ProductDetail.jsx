@@ -89,7 +89,7 @@ const ProductDetail = () => {
                         </Col>
 
                         <Col md={6}>
-                            <h1>{currentItem.title}</h1>
+                            <h1 className='font-bold text-xl text-green-700'>{currentItem.title}</h1>
                             <p>{currentItem.description}</p>
                             <h3 className="text-success">₹{currentItem.price}</h3>
 
@@ -154,7 +154,7 @@ const ProductDetail = () => {
                                                 variant="primary"
                                                 type="submit"
                                                 disabled={isSubmittingReview}
-                                                className="mt-3"
+                                                className="mt-3 bg-green-700"
                                             >
                                                 {isSubmittingReview ? 'Submitting...' : 'Submit Review'}
                                             </Button>
