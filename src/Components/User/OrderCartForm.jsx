@@ -115,7 +115,7 @@ const OrderForm = () => {
                     <p>Total Quantity: {totalQuantity}</p>
                     <p>Total Price: ₹{totalPrice.toFixed(2)}</p>
                 </div>
-                <button type="submit" className="w-full px-3 py-2 bg-blue-500 text-white rounded-md focus:outline-none focus:ring focus:ring-blue-200 sm:px-4 sm:py-3 lg:px-5 lg:py-4">
+                <button type="submit" className="w-full px-3 py-2 bg-green-500 text-white rounded-md focus:outline-none focus:ring focus:ring-blue-200 sm:px-4 sm:py-3 lg:px-5 lg:py-4">
                     Continue to Payment
                 </button>
             </form>
