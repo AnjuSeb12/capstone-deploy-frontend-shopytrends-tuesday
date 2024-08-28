@@ -65,11 +65,11 @@ const OrderForm = () => {
 
     return (
         <div className="max-w-lg mx-auto p-4 bg-white shadow-md rounded-md">
-            <h2 className="text-xl font-bold mb-4">Place Your Order</h2>
+            <h2 className="text-xl font-bold mb-4 text-black">Place Your Order</h2>
             <form onSubmit={handleSubmit} className="space-y-4">
                 {orderItems.map((item, index) => (
                     <div key={index} className="space-y-2">
-                        <h3 className="text-lg font-semibold">{item.title}</h3>
+                        <h3 className="text-lg font-semibold text-black">{item.title}</h3>
                         <img
                             src={item.image}
                             alt={item.title}
@@ -82,15 +82,15 @@ const OrderForm = () => {
                                 value={item.quantity}
                                 onChange={(e) => handleInputChange(index, e)}
                                 placeholder="Quantity"
-                                className="w-20 px-3 py-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-200"
+                                className="w-20 px-3 py-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-200 text-black"
                             />
-                            <p>Price: ₹{item.price.toFixed(2)}</p>
-                            <p>Total:₹{item.totalPrice.toFixed(2)}</p>
+                            <p className='text-black'>Price: ₹{item.price.toFixed(2)}</p>
+                            <p className='text-black'>Total Price:₹{item.totalPrice.toFixed(2)}</p>
                         </div>
                     </div>
                 ))}
                 <div className="mt-4">
-                    <h3 className="text-lg font-semibold mb-2">Shipping Address</h3>
+                    <h3 className="text-lg font-semibold mb-2 text-black">Shipping Address</h3>
                     <input
                         type="text"
                         name="address"

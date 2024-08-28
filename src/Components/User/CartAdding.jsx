@@ -101,7 +101,7 @@ const CartAdding = () => {
                 <div className="flex-1">
                   <div className="flex items-center justify-between mb-2">
                     <h3 className="text-lg sm:text-xl font-semibold text-black">{item.product.title}</h3>
-                    <span className="text-lg sm:text-xl font-semibold text-black">${item.totalPrice.toFixed(2)}</span>
+                    <span className="text-lg sm:text-xl font-semibold text-black">₹{item.totalPrice.toFixed(2)}</span>
                   </div>
                   <p className="mb-2 text-black text-sm sm:text-base">{item.product.description}</p>
                   <div className="flex items-center space-x-2 sm:space-x-4 mb-4">
@@ -127,7 +127,7 @@ const CartAdding = () => {
                     </button>
                   </div>
                   <p className="text-black text-sm sm:text-base">Quantity: {item.quantity}</p>
-                  <p className="text-black text-sm sm:text-base">Price (1 item): ${item.price.toFixed(2)}</p>
+                  <p className="text-black text-sm sm:text-base">Price (1 item): ₹{item.price.toFixed(2)}</p>
                 </div>
               </div>
             </li>
