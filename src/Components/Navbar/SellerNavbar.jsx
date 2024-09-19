@@ -41,7 +41,7 @@ const SellerNavbar = () => {
         
         setIsAuthenticated(false);
         
-        navigate('/seller/signup');
+        navigate('/');
       } else {
         console.error('Logout failed:', response.data.message);
       }
