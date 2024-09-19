@@ -202,7 +202,7 @@ const SearchResult = () => {
     navigate('/order-form', { state: { product } });
   };
 
-  if (loading) return <p className={`text-center ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Loading...</p>;
+  if (loading) return <p className="text-center ">Loading...</p>;
 
 
 
