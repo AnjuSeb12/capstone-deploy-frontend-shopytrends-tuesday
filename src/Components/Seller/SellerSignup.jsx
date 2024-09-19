@@ -83,7 +83,7 @@ const SellerSignup = () => {
       {errors.password && <p>{errors.password.message}</p>}
       <input type="submit" className="rounded-md bg-green-500 py-1 text-white" />
       <p>
-        Seller already exist{" "}
+        seller already exist{" "}
         <Link to="/seller/login" className="text-green-500 underline">
           Signin
         </Link>
